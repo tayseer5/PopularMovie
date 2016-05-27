@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference
+        android:key="@string/sort_syncConnectionType"
+        android:title="@string/pref_syncConnectionType"
+        android:entries="@array/sort_entries"
+        android:entryValues="@array/sort_values"
+        android:defaultValue="@string/pref_label_most_popular" />
+
+</PreferenceScreen>

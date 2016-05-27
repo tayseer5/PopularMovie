@@ -1,0 +1,144 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:divider="?android:attr/dividerVertical"
+    android:orientation="vertical"
+    tools:context="tayseer.test.MainActivity">
+    <TextView
+        android:id="@+id/movie_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_spacing_small"
+        android:background="@color/colorAccent"
+        android:padding="@dimen/activity_spacing_large"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/text_size_large"
+        android:textStyle="bold"
+        />
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/windowBackground"
+    android:layout_alignParentTop="true"
+    android:layout_weight="4"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context="com.example.mohamed.movies.DetailActivity$DetailFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            >
+
+            <ImageView
+                android:id="@+id/movie_poster"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:minWidth="@dimen/poster_height_large"
+                android:scaleType="fitStart"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="40dp"
+                android:orientation="vertical"
+                >
+
+             <TextView
+                    android:id="@+id/movie_release_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/activity_spacing_ultra_small"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/movie_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:paddingLeft="8dp"
+                    />
+                <ImageButton
+                    android:id="@+id/fav"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/favorite1"
+                    android:background="@null"
+                    android:onClick="Favorite"
+                    android:padding="8dp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/over_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_medium"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginTop="-40dp"
+            />
+</LinearLayout>
+
+</ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_weight="20"
+        >
+        <TextView android:text="TRAILERS"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:textColor="@color/blue"
+            />
+        <ListView
+            android:id="@+id/listview2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="40dp"
+            android:paddingTop="10dp"
+            android:divider="@null"
+            />
+        <TextView android:text="REVIEWS"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:textColor="@color/blue"
+            />
+        <ListView
+            android:id="@+id/review2"
+            android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:divider="@null"
+            />
+    </LinearLayout>
+</LinearLayout>
+
+
